@@ -38,7 +38,10 @@ function validateEmail() {
 
 function validatePhoneNumber() {
   const phone = document.getElementById("phone");
-  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+  const re = /^\d{4}[- ]?\d{3}[- ]?\d{4}$/;
+  // XXXX XXX XXXX
+  // XXXX-XXX-XXXX
+  // XXXXXXXXXXX
 
   if (!re.test(phone.value)) {
     phone.classList.add("is-invalid");
